@@ -1,3 +1,4 @@
+/* global angular */
 angular.module('skyEventApp')
   .controller('searchController', function ($scope, $location, auxiliarServices, eventBriteDataService) {
     var daySelected = ''
@@ -14,7 +15,6 @@ angular.module('skyEventApp')
       var eventName = $scope.eventName
       var locationName = $scope.locationName
       var data = { eventName: eventName, locationName: locationName, daySelected: daySelected, distanceSelected: distanceSelected }
-      console.log(data)
       auxiliarServices.setDataInput(data)
       $location.path('/search-results/')
     }

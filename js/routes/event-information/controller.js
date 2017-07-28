@@ -16,7 +16,9 @@
           $scope.infoEvent = data
           console.log($scope.infoEvent)
         })
-
+      $scope.goBack = function () {
+        window.history.back()
+      }
       $scope.renderHtml = auxiliarServices.renderHtmlWithAngular
     })
 })()

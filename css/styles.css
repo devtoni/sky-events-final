@@ -25,7 +25,7 @@
   width: 90%;
   margin: 10px 0px 10px 0px; }
 
-a.btn-order {
+a.btn-order, button.btn-order {
   background: #232526;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #414345, #232526);
@@ -534,7 +534,7 @@ nav {
 
 nav.navbar {
   border-bottom: 3px solid red;
-  background-color: #222222; }
+  background: #232526; }
   nav.navbar a > strong {
     color: white; }
 

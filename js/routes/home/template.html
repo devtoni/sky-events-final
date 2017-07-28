@@ -6,7 +6,7 @@
         <div class="col-xs-12 container-home-form">
           <div class="search-container">
             <h1>Encuentra los mejores eventos cerca de tí o donde quieras</h1>
-            <div class="form">
+            <form class="form">
               <div class="input-div">
                 <input type="text" placeholder="Qué quieres buscar?" ng-model="eventName" required>
                 <input type="text" placeholder="Dónde?" ng-model="locationName" required>
@@ -32,7 +32,7 @@
               </div>
               <a href="#!/search-results" class="btn btn-unique search-button" ng-click="getQuery()">Buscar</a>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
