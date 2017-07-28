@@ -1,0 +1,24 @@
+.bodyGlobal {
+  width: 100%;
+  background-image: url(../img/bg.jpg);
+}
+
+.content-description {
+  padding: 20px;
+  text-align: justify;
+  p>img {
+    width: 100%;
+  }
+}
+
+img.img-responsive {
+  margin: 0 auto;
+}
+
+h2.display-3.ng-binding {
+  text-align: center;
+}
+
+.bodyGlobal img {
+	width: 100%;
+}

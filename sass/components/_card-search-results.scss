@@ -1,0 +1,26 @@
+.container-card {
+  position: relative;
+  box-shadow: 1px 1px 5px 0 rgba(57, 57, 57, 0.1);
+  border-radius: 6px;
+  margin: 0.5rem;
+  display: flex;
+  width: 350px;
+  max-width: 450px;
+  flex-direction: column;
+}
+
+.container-img {
+
+  img {
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    height: 160px;
+  }
+}
+
+.container-info {
+  padding: 0.5rem;
+  min-height: 118px;
+  background-color: white;
+}

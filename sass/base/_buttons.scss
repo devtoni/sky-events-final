@@ -1,0 +1,53 @@
+.btn-unique {
+  border-radius: 3px;
+  /* font-family: 'Varela Round', sans-serif; */
+  font-size: 20px;
+  transition: .2s ease-out;
+  color: white !important;
+  /* margin: 10px 0px 10px 0px; */
+  white-space: normal !important;
+  word-wrap: break-word;
+  text-transform: uppercase;
+  background-color: rgba(179, 16, 16, 0.9) !important;
+  border: 1px solid white;
+  width: 100%;
+  height: auto;
+  background: #1C2331;
+}
+
+
+.btn-primary {
+  background: rgba(179, 16, 16, 0.9) !important;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+
+.btn .searchButton {
+  border-radius: 10px;
+  border: 2px solid rgb(225, 225, 225);
+  width: 90%;
+  margin: 10px 0px 10px 0px;
+}
+
+a.btn-order {
+  background: #232526;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #414345, #232526);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  border-radius: 2px;
+  transition: .2s ease-out;
+  padding: 0.5rem 1rem;
+  /* margin: 6px; */
+  white-space: normal;
+  word-wrap: break-word;
+  text-transform: uppercase;
+  border: 1px solid #d2d6df;
+}
+
+.btn-order:active {
+  color: white;
+}

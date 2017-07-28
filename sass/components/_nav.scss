@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav.navbar {
+  border-bottom: 3px solid red;
+  background-color: rgb(34, 34, 34);
+  a>strong {
+    color: white;
+  }
+}
+
+nav.navbar.navbar-toggleable-md.navbar.bg-primary.ng-scope {
+  margin-bottom: 0px;
+  background: $bg-navbar;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526); 
+}
+
+
+a.navbar-brand {
+  color: white;
+}
+
+.nav-main-container {
+	display: flex;
+	justify-content: center;
+}

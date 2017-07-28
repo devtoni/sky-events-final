@@ -1,0 +1,128 @@
+@import "base/_buttons";
+@import "base/_colors";
+@import "base/_fonts";
+@import "base/_scaffolding";
+@import "base/_inputs";
+@import "components/_filter";
+@import "components/_home-gallery";
+@import "components/_search-gallery";
+@import "components/_header";
+@import "components/_home-form";
+@import "components/_pagination";
+@import "components/_images-event-page";
+@import "components/_card-search-results";
+@import "components/_nav";
+@import "components/_event-information";
+@import "components/_load-spinner";
+@import "components/_footer";
+
+
+
+.search-results {
+  margin-top: 1rem;
+}
+
+.eventos-cercanos {
+  margin-top: 2rem;
+}
+
+.order-div {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+
+
+
+
+@media (max-width: 365px) {
+  .content-form-home {
+    top: 5%;
+  }
+}
+
+@media(max-width:500px) {
+  .container-card {
+    width: 100%;
+  }
+}
+
+@media(max-width:768px) {
+  .container-gallery {
+    justify-content: center;
+  }
+    .nav-side-menu {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .nav-side-menu .toggle-btn {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    padding: 3px;
+    color: white;
+    width: 40px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+ 
+}
+
+@media (min-width: 767px) {
+  h2 {
+    font-size: 20px;
+  }
+
+ .nav-side-menu .menu-list .menu-content {
+    display: block;
+  }
+  .container-card {
+    width: 47%;
+  }
+  .container-gallery {
+    width: 74%;
+    float: right;
+
+  }
+  .order-div {
+    text-align: left;
+  }
+
+  .brand {
+
+    font-size: 22px;
+    background-color: rgb(34, 34, 34);
+  }
+}
+
+
+@media (min-width:990px) {
+  .search-container {
+    min-height: 300px;
+    width: 750px;
+  }
+  .container-home-form {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+
+
+
+
+
+// .popularTitle {
+//   margin-bottom: 40px;
+//   margin-top: 40px;
+//   text-align: center;
+// }
+// .captionEvent {
+//   min-height: 90px;
+// }
