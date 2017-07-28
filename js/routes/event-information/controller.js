@@ -7,14 +7,12 @@
 
       eventBriteDataService.getLocalization(venueId)
         .then(function (data) {
-          console.log(data)
           $scope.locaInfo = data
         })
 
       eventBriteDataService.getId(eventId)
         .then(function (data) {
           $scope.infoEvent = data
-          console.log($scope.infoEvent)
         })
       $scope.goBack = function () {
         window.history.back()
