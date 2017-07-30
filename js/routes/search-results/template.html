@@ -18,8 +18,8 @@
               <a><i class="fa fa-gift fa-lg"></i> Categorías <span class="arrow"></span></a>
             </li>
             <ul class="sub-menu collapse" id="categories">
-             
-              <li active ng-repeat="category in listCategories" data-id="{{category.id}}" ng-click="getCategory($event)"><a>
+
+              <li active ng-repeat="category in vm.listCategories" data-id="{{vm.category.id}}" ng-click="vm.getCategory($event)"><a>
                       {{category.name}}
               </a>
               </li>
@@ -28,16 +28,16 @@
               <a><i class="fa fa-money fa-lg" aria-hidden="true"></i> Precio <span class="arrow"></span></a>
             </li>
             <ul class="sub-menu collapse" id="products">
-              <li active ng-click="free($event)"><a>Gratis</a></li>
-              <li ng-click="free($event)"><a>Pago</a></li>
+              <li active ng-click="vm.free($event)"><a>Gratis</a></li>
+              <li ng-click="vm.free($event)"><a>Pago</a></li>
             </ul>
             <li data-toggle="collapse" data-target="#fecha" class="collapsed active">
               <a><i class="fa fa-calendar fa-lg" aria-hidden="true "></i> Fecha <span class="arrow"></span></a>
             </li>
             <ul class="sub-menu collapse" id="fecha">
               <li active>
-                <input type="date" ng-model="day" ng-change="getValueDate()" />
-                <h1>{{date}}</h1>
+                <input type="date" ng-model="day" ng-change="vm.getValueDate()" />
+                <h1>{{vm.date}}</h1>
               </li>
             </ul>
             <li data-toggle="collapse" data-target="#nombre" class="collapsed active">
@@ -55,12 +55,12 @@
     <!-- @end filter options -->
     <!-- order buttons -->
     <div class="col-xs-12 col-sm-9 order-div ">
-      <a class="btn-order " ng-click="order($event) ">RELEVANCIA</a>
-      <a class="btn-order " ng-click="order($event) ">FECHA</a>
+      <a class="btn-order " ng-click="vm.order($event) ">RELEVANCIA</a>
+      <a class="btn-order " ng-click="vm.order($event) ">FECHA</a>
     </div>
     <!-- @end order buttons -->
     <!-- advise not found element -->
-    <div class="col-xs-12 col-sm-9 no-events" ng-show="!eventsArray.length">
+    <div class="col-xs-12 col-sm-9 no-events" ng-show="!vm.eventsArray.length">
       <h1>Vaya, parece que no hemos encontrado nada</h1>
       <a href="#!" class="btn btn-default text-center" >Volver</a>
     </div>
@@ -68,7 +68,7 @@
     <!-- @end not found element -->
       <!-- @begin gallery -->
       <div class="col-xs-12 col-sm-9  container-gallery">
-        <div class="container-card" dir-paginate="event in eventsArray | itemsPerPage: 6 | orderBy: value | filter : {category_id : catId, is_free : gratis, name:{text : nombre}, created : format }">
+        <div class="container-card" dir-paginate="event in vm.eventsArray | itemsPerPage: 6 | orderBy: vm.value | filter : {category_id : vm.catId, is_free : vm.gratis, name:{text : nombre}}">
           <span class="card-media-object-tag subtle " ng-if="event.is_free">Gratis</span>
           <div class="container-img">
             <img ng-style="{'background-image':'url({{event.logo.url}})'}">
@@ -77,7 +77,7 @@
             <div class="container-info">
               <span class="subtle ">{{ event.start.local | date:'dd MMM yyyy HH:mm:ss'}}</span>
               <span class="card-media-body-heading ">{{event.name.text}}</span>
-              <span class="card-media-body-supporting-bottom-text subtle ">{{categoryName[event.category_id]}}</span>
+              <span class="card-media-body-supporting-bottom-text subtle ">{{vm.categoryName[event.category_id]}}</span>
               <a ng-href="#!/evento/{{event.id}}&{{event.venue_id}} " class="card-media-body-supporting-bottom-text card-media-link u-float-right ">Más información</a>
             </div>
           </div>
@@ -86,7 +86,7 @@
     </div>
     <!-- @begin spinner loading -->
     <div class="col-xs-12 col-sm-9 text-center load-div">
-      <img ng-src="https://res.cloudinary.com/drenzfi8m/image/upload/v1501188393/load-spinner_xhf3th.gif" alt="" ng-if="!eventsArray.length">
+      <img ng-src="https://res.cloudinary.com/drenzfi8m/image/upload/v1501188393/load-spinner_xhf3th.gif" alt="" ng-if="!vm.eventsArray.length">
     </div>
     <!-- @end spinnner loading -->
     <div class="pagination">
