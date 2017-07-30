@@ -2,26 +2,26 @@
 <div class="bodyGlobal">
     <div class="container">
         <div class="jumbotron">
-            <h2 class="display-3">{{infoEvent.data.name.text}}</h2>
+            <h2 class="display-3">{{vm.infoEvent.data.name.text}}</h2>
             <div class="container">
-                <img class="img-event" ng-style="{'background-image':'url(' + infoEvent.data.logo.url + ')'}">
+                <img class="img-event" ng-style="{'background-image':'url(' + vm.infoEvent.data.logo.url + ')'}">
             </div>
             <div class="row">
                 <hr class="my-2">
-                <div class="col-md-7 content-description" ng-bind-html=renderHtml(infoEvent.data.description.html)>
+                <div class="col-md-7 content-description" ng-bind-html=vm.renderHtml(vm.infoEvent.data.description.html)>
                 </div>
                 <div class="col-md-5">
                     <p><strong>Día y hora inicio:</strong></p>
-                    <p>{{infoEvent.data.start.local | date:'dd MMM yyyy HH:mm:ss'}}</p>
+                    <p>{{vm.infoEvent.data.start.local | date:'dd MMM yyyy HH:mm:ss'}}</p>
                     <p><strong>Día y hora final:</strong></p>
-                    <p>{{infoEvent.data.end.local | date:'dd MMM yyyy HH:mm:ss'}}</p>
-                    <p><strong>Ubicación:</strong></p> 
-                    <p>{{locaInfo.data.name}}</p>
+                    <p>{{vm.infoEvent.data.end.local | date:'dd MMM yyyy HH:mm:ss'}}</p>
+                    <p><strong>Ubicación:</strong></p>
+                    <p>{{vm.locaInfo.data.name}}</p>
                     <p class="lead">
-                        <ng-map center="[{{locaInfo.data.latitude}}, {{locaInfo.data.longitude}}]">
-                            <marker position="[{{locaInfo.data.latitude}}, {{locaInfo.data.longitude}}]" decimals="marker.decimals" options="marker.options"></marker>
+                        <ng-map center="[{{vm.locaInfo.data.latitude}}, {{vm.locaInfo.data.longitude}}]">
+                            <marker position="[{{vm.locaInfo.data.latitude}}, {{vm.locaInfo.data.longitude}}]" decimals="marker.decimals" options="marker.options"></marker>
                         </ng-map>
-                        <a class="btn btn-primary btn-lg" href="{{infoEvent.data.url}}" role="button">Comprar</a>
+                        <a class="btn btn-primary btn-lg" href="{{vm.infoEvent.data.url}}" role="button">Comprar</a>
                     </p>
                 </div>
             </div>

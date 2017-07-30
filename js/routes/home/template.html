@@ -1,4 +1,4 @@
-<div ng-controller="searchController">
+<div ng-controller="searchController as vm">
   <header class="cover">
         <h1 class="brandName">SkyEvents</h1>
       <div class="container">
@@ -8,11 +8,11 @@
             <h1>Encuentra los mejores eventos cerca de tí o donde quieras</h1>
             <form class="form">
               <div class="input-div">
-                <input type="text" placeholder="Qué quieres buscar?" ng-model="eventName" required>
-                <input type="text" placeholder="Dónde?" ng-model="locationName" required>
+                <input type="text" placeholder="Qué quieres buscar?" ng-model="vm.eventName" required>
+                <input type="text" placeholder="Dónde?" ng-model="vm.locationName" required>
               </div>
               <div class="select-div">
-                <select name="" id="" ng-model="daySelected" ng-change="getDay()" required>
+                <select name="" id="" ng-model="vm.daySelected" ng-change="vm.getDay()" required>
                   <option value="" selected disabled>Selecciona un dia</option>
                   <option value="today">Hoy</option>
                   <option value="tomorrow">Mañana</option>
@@ -22,7 +22,7 @@
                   <option value="this_month">Este mes</option>
                   <option value="next_month">Próximo mes</option>
                 </select>
-                <select name="" id="" ng-model="distanceSelected" ng-change="getDistance()" required>
+                <select name="" id="" ng-model="vm.distanceSelected" ng-change="vm.getDistance()" required>
                   <option value="" selected disabled>Selecciona una distancia</option>
                   <option value="50">50 km</option>
                   <option value="100">100 km</option>
@@ -30,7 +30,7 @@
                   <option value="1000">1000 km</option>
                 </select>
               </div>
-              <a href="#!/search-results" class="btn btn-unique search-button" ng-click="getQuery()">Buscar</a>
+              <a href="#!/search-results" class="btn btn-unique search-button" ng-click="vm.getQuery()">Buscar</a>
             </div>
           </form>
         </div>
@@ -39,18 +39,18 @@
   </header>
 </div>
 <div class="container">
-  <div class="popular-event" ng-controller="popularEvents">
+  <div class="popular-event" ng-controller="popularEvents as vm">
 <div class="col-xs-12 text-center">
-  <img ng-src="https://res.cloudinary.com/drenzfi8m/image/upload/v1501188393/load-spinner_xhf3th.gif" alt="" ng-show="!eventsArray.length">
+  <img ng-src="https://res.cloudinary.com/drenzfi8m/image/upload/v1501188393/load-spinner_xhf3th.gif" alt="" ng-show="!vm.eventsArray.length">
 </div>
   <div class="row">
     <!-- <h1>Eventos populares cerca de <span>{{city}}</span></h1> -->
     <h1>Eventos populares cerca tuyo</h1>
     <div class="gallery-events">
-      <div class="card" ng-repeat="event in eventsArray">
+      <div class="card" ng-repeat="event in vm.eventsArray">
         <!--Card image-->
        <div class="container-image-home">
-          <img class="" ng-src="{{event.logo.url || imgNoAv}}" alt="Card image cap">
+          <img class="" ng-src="{{event.logo.url}}" alt="Card image cap">
        </div>
         <!--/.Card image-->
         <!--Card content-->
