@@ -19,7 +19,7 @@ skyEvents es un proyeto de front-end, el cual sirve como buscador de eventos. Es
 ![img](img/portada2.JPG)
 
 
-**La siguente parte** es una vez hecha una busqueda, no sale la pantalla con los resultados de la busqueda en tarjetas y con un aside lateral de los filtros(categoria, precio, fecha, nombre del evento) y una barra para la paginación de la web.
+**La siguente parte** es una vez hecha una busqueda, nos sale la pantalla con los resultados de la busqueda en tarjetas y con un aside lateral de los filtros(categoria, precio, fecha, nombre del evento) y una barra para la paginación de la web.
 
 ![img](img/events.JPG)
 
