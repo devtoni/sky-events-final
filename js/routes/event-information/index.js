@@ -4,10 +4,12 @@ angular.module('skyEventApp')
     $routeProvider
       .when('/search-results/:id', {
         templateUrl: 'js/routes/search-results/template.html',
-        controller: 'showEvents'
+        controller: 'showEvents',
+        controllerAs: 'vm'
       })
       .when('/evento/:id', {
         templateUrl: 'js/routes/event-information/template.html',
-        controller: 'eventInformation'
+        controller: 'eventInformation',
+        controllerAs: 'vm'
       })
   })

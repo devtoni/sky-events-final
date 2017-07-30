@@ -1,6 +1,7 @@
+/* global angular */
 (function () {
-  angular.module('skyEventApp')
-  .service('auxiliarServices', function ($sce) {
+  var app = angular.module('skyEventApp')
+  app.service('auxiliarServices', function ($sce) {
     var data = {}
     this.setDataInput = function (object) {
       data = object

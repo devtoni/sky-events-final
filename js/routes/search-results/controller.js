@@ -1,66 +1,68 @@
 /* global angular */
-angular.module('skyEventApp')
-  .controller('showEvents', function ($scope, $routeParams, eventBriteDataService, auxiliarServices) {
+(function () {
+  var app = angular.module('skyEventApp')
+  app.controller('showEvents', showEvents)
+  function showEvents ($routeParams, eventBriteDataService, auxiliarServices) {
+    var self = this
     var userQuery = auxiliarServices.getDataInput()
-    $scope.placeSearched = userQuery.locationName
+    self.placeSearched = userQuery.locationName
+
     eventBriteDataService.getData(userQuery.eventName, userQuery.locationName, userQuery.daySelected, userQuery.distanceSelected)
-      .then(function (events) {
-        $scope.noResults = true
-        $scope.eventsArray = events.data.events
-      })
-      .catch(function (error) {
-        $scope.noResults = false
-      })
+        .then(function (events) {
+          self.noResults = true
+          self.eventsArray = events.data.events
+        })
 
-    // list of categories
+      // list of categories
     eventBriteDataService.getCat()
-      .then(function (oCategories) {
-        listCategories(oCategories)
-      })
+        .then(function (oCategories) {
+          listCategories(oCategories)
+        })
 
-    $scope.getCategory = function (e) {
-      $scope.catId = e.currentTarget.dataset.id
+    self.getCategory = function (e) {
+      self.catId = e.currentTarget.dataset.id
     }
 
-    $scope.free = function (e) {
+    self.free = function (e) {
       console.log(e.target.textContent)
       if (e.target.textContent === 'Gratis') {
-        $scope.gratis = true
+        self.gratis = true
       }
       if (e.target.textContent === 'Pago') {
-        $scope.gratis = false
+        self.gratis = false
       }
     }
 
-    $scope.order = function (e) {
+    self.order = function (e) {
       if (e.target.textContent === 'FECHA') {
-        if ($scope.value !== 'start.local') {
-          $scope.value = 'start.local'
+        if (self.value !== 'start.local') {
+          self.value = 'start.local'
         } else {
-          $scope.value = '-start.local'
+          self.value = '-start.local'
         }
       } else {
-        if ($scope.value !== 'organizer_id') {
-          $scope.value = 'organizer_id'
+        if (self.value !== 'organizer_id') {
+          self.value = 'organizer_id'
         } else {
-          $scope.value = '-organizer_id'
+          self.value = '-organizer_id'
         }
       }
     }
 
     function listCategories (oCategories) {
-      $scope.listCategories = oCategories.data.categories
-      $scope.listCategories = $scope.listCategories.map(category => {
+      self.listCategories = oCategories.data.categories
+      self.listCategories = self.listCategories.map(category => {
         return {
           name: category.name,
           id: category.id
         }
       })
-      $scope.listCat = $scope.listCategories.map(category => {
+      self.listCat = self.listCategories.map(category => {
         return {
           [category.id]: category.name
         }
       })
-      $scope.categoryName = auxiliarServices.mergeArrayOfObjects($scope.listCat)
+      self.categoryName = auxiliarServices.mergeArrayOfObjects(self.listCat)
     }
-  })
+  }
+})()

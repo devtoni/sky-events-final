@@ -5,6 +5,7 @@
   app.controller('popularEvents', popularEvents)
   function popularEvents (eventBriteDataService) {
     var self = this
+    self.imgNoAv = 'http://res.cloudinary.com/drenzfi8m/image/upload/v1501183394/no-image-available_yxkp4d.png'
     navigator.geolocation.getCurrentPosition(function (position) {
       var latitude = position.coords.latitude
       var longitude = position.coords.longitude
