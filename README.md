@@ -35,7 +35,7 @@ skyEvents es un proyeto de front-end, el cual sirve como buscador de eventos. Es
 Estructura del projecto
 ---------------------------
 
-La estructura de nuestro poryecto es la siguiente:
+La estructura de nuestro proyecto es la siguiente:
 ![img](img/estructura.JPG)
 
 Dentro de la carpeta de routes, tenemos las routas de las paginas con sus controladores, su template y su index.js.
@@ -48,10 +48,16 @@ Tecnologia usada
 Para hacer este proyecto hemos usado la siguiente tecnologia:
 - HTML5
 - SCSS
-- BOOTSTRAP
-- ANGULAR JS
-    + LLAMADA A LA API DE GOOGLE MAPS
-    + LLAMADA A LA API DE EVENBRITE
-    + LLAMADA A UNA API DE GEOLOCALIZACIÓN
+- BOOTSTRAP3
+- ANGULAR JS 1.6.5
+    + ANGULAR ROUTES 1.6.5
+    + GOOGLE MAPS API
+    + EVENTBRITE API
+    + PAGINATION
 
+Autores
+-------------------
 
+- [Oscar Barriga](https://github.com/oscarbarsan)
+- [Maxim Remon](https://github.com/MaximRG)
+- [Toni Ruiz](https://github.com/devtoni)
