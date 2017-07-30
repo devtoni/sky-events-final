@@ -1,11 +1,13 @@
-![img](http://stefanschuster.at/img/consulting_html5.png)
+[![HTML5,CSS3 and JS](https://github.com/FransLopez/logo-images/blob/master/logos/html5-css3-js.png)](http://www.w3.org/) [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)  [![Bootstrap](https://github.com/FransLopez/logo-images/blob/master/logos/bootstrap.png)](http://getbootstrap.com/)  [![SASS](https://github.com/FransLopez/logo-images/blob/master/logos/sass.png)](http://sass-lang.com/)  [![AngularJS](https://github.com/FransLopez/logo-images/blob/master/logos/angularjs.png)](https://angularjs.org/) [![Skylab](https://github.com/FransLopez/logo-images/blob/master/logos/skylab-56.png)](http://www.skylabcoders.com/)  
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+
+---
 
 [skyEvents](https://devtoni.github.io/sky-events-project/)
 ==================
 
-skyEvents es un proyeto de front-end, el cual sirve como buscador de eventos. Este proyecto consta de una pagina principal, la cual esta divida en dos partes:
+skyEvents es un proyeto de front-end, el cual sirve como buscador de eventos. Este proyecto consta de una pagina principal, la cual esta dividida en dos partes:
 
 -**El buscador:** Consta de 2 inputs para buscar por Categoria del evento y por la localización. También hay dos options para buscar por rango de fecha y rango de distancia.
 
